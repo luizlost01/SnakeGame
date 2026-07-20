@@ -8,6 +8,8 @@ class Fruit {
         std::vector<Vector2> body; 
 
         Fruit(float currentXPose, float currentYPose);
-        void Draw();
-        void Update();
+        void Draw(float currentXPose, float currentYPose);
+        void Catch();
+        void Position();
+    
     };

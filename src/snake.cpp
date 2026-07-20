@@ -9,7 +9,7 @@ Snake::Snake(float currentXPose, float currentYPose) {
 }
 
 void Snake::Update() {
-    float velocity = 5.0f;
+    float velocity = 1.0f;
 
     if(IsKeyPressed(KEY_W)) {
         speed.x = 0;

@@ -11,21 +11,28 @@ int main() {
     SetTargetFPS(60);
 
     Snake Player(screenWidth / 2, screenHeight / 2);
-    Fruit apple(400, 210);
-
+    Fruit Apple(400, 210);
+    
     Player.Increase();
     Player.Increase();
     Player.Increase();
     Player.Increase();
-
+    
     while (!WindowShouldClose())
     {
         
         BeginDrawing();
         ClearBackground(WHITE);
         Player.Draw();
+        Apple.Draw(400, 500);
+    
+        
+        if(CheckCollisionCircles(Player.body[0], 5, Apple.body[0].x, 5)) {
+            DrawText("COLLISION", 300, 30, 15, BLACK);
+        }
+        
         Player.Update();
-        apple.Draw();
+
         EndDrawing();
     }
 
