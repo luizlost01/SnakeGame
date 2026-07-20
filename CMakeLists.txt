@@ -11,6 +11,6 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(raylib)
 
-add_executable(snake main.cpp)
+add_executable(snake main.cpp snake.cpp fruit.cpp)
 
 target_link_libraries(snake PRIVATE raylib)
